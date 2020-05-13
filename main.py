@@ -1,35 +1,4 @@
-import sys
-import time
 import apa
-import os
-
-def begin():
-    print('Welcome to my automatic APA formatting program.\nWe all know after that citation master quiz you did not remeber jack.\nFear no more Jeffrey has got your back.')
-    options = {'(1)':'Article','(2)':'Webpage','(3)':'Book','(4)':'Quit'}
-
-    for x in options:
-        print(f"{x}:{options[x]}")
-    choice = input('What is your choice?: ')
-
-    if choice == '4':
-        print('\nExiting...')
-        time.sleep(2)
-        try:
-            os.system('clear')
-        except:
-            os.system('cls')
-        sys.exit()
-    elif choice == '1':
-        print(f"\nReference: {choice1()}")
-    elif choice == '2':
-        print(f"\nReference: {choice2()}")
-    elif choice == '3':
-        choice3()
-        #print(f"\nReference: {choice3()}")
-    else:
-        print("Invalid Input, press any key to reselect")
-        input()
-        begin()
 
 #function for processing author names
 def author_info(number,author_list):
@@ -41,77 +10,67 @@ def author_info(number,author_list):
     author_list.pop(0)
 
     return names
-    '''
-def author_info():
-    authors = input('How many authors?: ')
-    names = []
-    for x in range(int(authors)):
-        names.append(input(f"author number {x}: "))
-    return names
-    '''
 
 #article option
-def choice1():
-    author = author_info()
-    title_of_article = input("Title of the article: ")
-    title_of_periodical = input("Name of periodical: ")
-    date = input("Date of publication(dd-mm-yyyy): ")
-    volume_number = input("Volume number: ")
-    issue_number = input("Issue number: ")
-    url = input("Url: ")
-    kojo = apa.Apa()
-    return kojo.article(author,date,title_of_article,title_of_periodical,volume_number,issue_number,url)
-    '''
-    title
-    author
-    publication_date
-    periodical title'
-    volume number
-    issue number
-    url
-    '''
-#book option
-def choice3():
-    source = open("book.txt","r")
-    destination = open("bookref.txt","w")
+def articles():
+    try:
+        source = open("unformatted_articles.txt","r")
+        destination = open("formatted_articles.txt","w")
+    except:
+        exit(1)
     for line in source:
-        stuff = line.split(',')
-        author = author_info(stuff[0],stuff)
-        title = stuff[0]
-        year = stuff[1]
-        location = stuff[2]
-        publisher = stuff[3]
+        source_info = line.split(',')
+        author = author_info(source_info[0],source_info)
+        date = source_info[0]
+        title = source_info[1]
+        periodical = source_info[2]
+        volume_number = source_info[3]
+        issue_number = source_info[4]
+        url = source_info[-1]
+        kojo = apa.Apa()
+        destination.write(kojo.article(author,date,title,periodical,volume_number,issue_number,url))
+    
+    source.close()
+    destination.close()
+
+
+#book option
+def books():
+    try:
+        source = open("unformatted_books.txt","r")
+        destination = open("formatted_books.txt","w")
+    except:
+        exit(1)
+    for line in source:
+        source_info = line.split(',')
+        author = author_info(source_info[0],source_info)
+        title = source_info[0]
+        year = source_info[1]
+        location = source_info[2]
+        publisher = source_info[-1]
         kojo = apa.Apa()
         destination.write(kojo.book(author,title,year,location,publisher))
 
     source.close()
     destination.close()
 
-    '''
-    author = author_info()
-    title = input("Title of the book: ")
-    year = input("Year of publication: ")
-    location = input("Location of publication: ")
-    publisher = input("Publisher: ")
-    kojo = apa.Apa()
-    return kojo.book(author,title,year,location,publisher)
-    '''
-    '''
-    title
-    author
-    year
-    location
-    publisher
-    '''
-#webpage
-def choice2():
-    print('choice 2 working')
-    '''
-    author
-    date
-    site_name
-    url
-    title
-    '''
 
-begin()
+#webpage
+def webpages():
+    try:
+        source = open("unformatted_webpages.txt","r")
+        destination = open("formatted_webpages.txt","w")
+    except:
+        exit(1)
+    for line in source:
+        source_info = line.split(',')
+        author = author_info(source_info[0],source_info)
+        title = source_info[1]
+        name  = source_info[0]
+        date = source_info[2]
+        url = source_info[-1]
+        kojo = apa.Apa()
+        destination.write(kojo.webpage(author,date,title,name,url))
+
+    source.close()
+    destination.close()

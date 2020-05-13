@@ -1,0 +1,4 @@
+1,George Orwell,1984,1955,New York,The new American Library
+1,Joanne Kathleen Rowling,harry Potter and the prisoner of azkaban,2000,Location,Thorndike Press
+1,George Orwell,Animal farm,1989,Blairgowrie,Guidlines
+1,Rick Riordan,The Lightning Thief,2005,Location,Hyperion Books
