@@ -15,11 +15,11 @@ pip3 uninstall -y -r requirements.txt
 A tool for generating APA style references for webpages, online articles and books.
 
 ## USAGE:
-1.Enter information about the source, with the appropriate preprocessing guidlines stated below, in the appropriate file.
-2.Run format.py.
-3.Check the box next to the references you want to generate.
-4.Click the "Format" button.
-5.Locate your APA formatted references in the newly generated formatted_{source}.txt file.
+1. Enter information about the source, with the appropriate preprocessing guidlines stated below, in the appropriate file.
+2. Run format.py.
+3. Check the box next to the references you want to generate.
+4. Click the "Format" button.
+5. Locate your APA formatted references in the newly generated formatted_{source}.txt file.
 
 ## PREPROCESSING:
 1. One source per line
