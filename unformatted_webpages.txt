@@ -1,2 +1,4 @@
 1,Amy McKenna,encyclopedia Britannica,Blaise Compaore:President of Burkina Faso,04-06-2001,https://www.britannica.com/biography/Blaise-Compaore
 1,Devon Price,medium,Laziness Does not Exist,23-03-2018,https://humanparts.medium.com/laziness-does-not-exist-3af27e312d01
+1,Martin Zikmund,mzikmund,Launch Windows Terminal quickly from file explorer,09-01-2020,https://blog.mzikmund.com/2020/01/tip-launch-windows-terminal-quickly-from-file-explorer/
+1,Lawrence Abrams,bleeping computer,Hacker shares 40 million Wishbone user records for free,https://www.bleepingcomputer.com/news/security/hacker-shares-40-million-wishbone-user-records-for-free/
