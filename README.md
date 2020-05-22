@@ -2,14 +2,17 @@
 #### By: Kojo Nyarku Baidoo; 69092023; Cohort B
  
 ## REQUIREMENTS
-PyQt5==5.14.2
-PyQt5-sip==12.7.2
+* PyQt5==5.14.2
+* PyQt5-sip==12.7.2
 
 ## SETUP:
+```
 pip3 install -y -r requirements.txt
-
+```
 ## CLEAN UP:
+```
 pip3 uninstall -y -r requirements.txt
+```
 
 ## DESCRIPTION:
 A tool for generating APA style references for webpages, online articles and books.
