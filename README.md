@@ -1,6 +1,6 @@
-# APA FORMATTING TOOL 
+# APA FORMATTING TOOL
 #### By: Kojo Nyarku Baidoo; 69092023; Cohort B
- 
+
 ## REQUIREMENTS
 * PyQt5==5.14.2
 * PyQt5-sip==12.7.2
@@ -18,7 +18,7 @@ pip3 uninstall -y -r requirements.txt
 A tool for generating APA style references for webpages, online articles and books.
 
 ## USAGE:
-1. Enter information about the source, with the appropriate preprocessing guidlines stated below, in the appropriate file.
+1. Enter information about the source you want to reference, with the appropriate preprocessing guidlines stated below, in the appropriate file.
 2. Run format.py.
 3. Check the box next to the references you want to generate.
 4. Click the "Format" button.
