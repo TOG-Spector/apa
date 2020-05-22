@@ -1,5 +1,5 @@
-APA FORMATTING TOOL
-By: Kojo Nyarku Baidoo; 69092023; Cohort B
+# APA FORMATTING TOOL
+### By: Kojo Nyarku Baidoo; 69092023; Cohort B
 ======================================================================================================
 REQUIREMENTS
 PyQt5==5.14.2
